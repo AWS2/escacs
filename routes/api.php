@@ -21,5 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('test', function(Request $request) {
 	$ret = array();
 	$ret["status"] = "OK";
+
+	//Activem CORS
+	header("Access-Control-Allow-Origin: *");
 	return $ret;
 });
